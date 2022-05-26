@@ -1,0 +1,38 @@
+{
+	"name": "element-scroller",
+	"version": "1.0.0",
+	"description": "Improved and extended interface for smooth DOM element scrolling.",
+	"homepage": "https://github.com/tomasklaen/element-scroller",
+	"bugs": "https://github.com/tomasklaen/element-scroller/issues",
+	"repository": "github:tomasklaen/element-scroller",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"keywords": [
+		"element",
+		"smooth",
+		"scroll",
+		"scrolling",
+		"DOM"
+	],
+	"author": "tomasklaen",
+	"license": "MIT",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"clean": "rimraf dist",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"preversion": "npm-run-all clean build",
+		"git-push": "git push",
+		"npm-publish": "npm publish",
+		"postversion": "npm-run-all git-push npm-publish"
+	},
+	"devDependencies": {
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^3.0.2",
+		"tslib": "^2.3.1",
+		"typescript": "^4.5.4"
+	}
+}

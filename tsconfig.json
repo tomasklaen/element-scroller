@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"removeComments": true,
+		"declaration": true,
+		"baseUrl": "src",
+		"paths": {"*": ["*"]},
+		"outDir": "dist",
+		"jsx": "react",
+		"jsxFactory": "h",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"newLine": "LF",
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"target": "ES2019",
+		"sourceMap": false
+	},
+	"include": ["src"]
+}
