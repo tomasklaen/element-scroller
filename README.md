@@ -6,7 +6,7 @@ Native scrolling APIs are horrendous when using `behavior: 'smooth'` because whe
 
 Features:
 
--   Tiny, [<2KB min, ~1KB gz](https://bundlephobia.com/package/element-scroller).
+-   Tiny, [~2KB min, ~1KB gz](https://bundlephobia.com/package/element-scroller).
 -   Configurable scrolling friction coefficient.
 -   Can take over native mouse wheel (to match scrolling friction).
 -   Ability to flip wheel direction: vertical scrolling will scroll element horizontally.
@@ -65,7 +65,7 @@ interface Options {
 	 */
 	flipWheel: boolean;
 	/**
-	 * Coefficient of friction to use when wheel scrolling. Default: 0.3
+	 * Coefficient of friction to use when wheel scrolling. Default: 0.25
 	 */
 	wheelFriction: number;
 }
