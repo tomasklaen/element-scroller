@@ -102,7 +102,7 @@ export function makeScroller(
 		element,
 		friction: frictionOption ?? 0.2,
 		flipWheel: !!flipWheel,
-		wheelFriction: wheelFriction ?? 0.3,
+		wheelFriction: wheelFriction ?? 0.25,
 		scrollTo,
 		scrollBy,
 		glide,
