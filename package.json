@@ -1,6 +1,6 @@
 {
 	"name": "element-scroller",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Improved and extended interface for smooth DOM element scrolling.",
 	"homepage": "https://github.com/tomasklaen/element-scroller",
 	"bugs": "https://github.com/tomasklaen/element-scroller/issues",
