@@ -158,11 +158,11 @@ export function makeScroller(
 			let yDelta = y * adjustedFriction;
 
 			scrolling[0] = abs(xDelta) < 0.2 || !isWithin(0, left + xDelta, width) ? 0 : x - xDelta;
-			scrolling[1] = abs(yDelta) < 0.2 || !isWithin(0, left + yDelta, height) ? 0 : y - yDelta;
+			scrolling[1] = abs(yDelta) < 0.2 || !isWithin(0, top + yDelta, height) ? 0 : y - yDelta;
 			if (scrolling[0] === 0 && scrolling[1] === 0) scrolling = null;
 
 			leftBy += xDelta;
-			topBy += xDelta;
+			topBy += yDelta;
 		}
 
 		// Gliding
@@ -197,8 +197,8 @@ export function makeScroller(
 		const {width, height} = getScrollLength();
 		scrollBy({
 			...rest,
-			left: clamp(0, left || currentPosition.left, width) - (currentPosition.left + (scrolling?.[0] || 0)),
-			top: clamp(0, top || currentPosition.top, height) - (currentPosition.top + (scrolling?.[1] || 0)),
+			left: left == null ? 0 : clamp(0, left, width) - (currentPosition.left + (scrolling?.[0] || 0)),
+			top: top == null ? 0 : clamp(0, top, height) - (currentPosition.top + (scrolling?.[1] || 0)),
 		});
 	}
 
